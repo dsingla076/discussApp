@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Discussion Portal</h1>
+    </div>
+    <div class="container">
+        <div class="left-pane">
+            <h2>Queries</h2>
+            <button class="new-question-button" id="new-question-btn">New Question</button>
+            <input type="text" id="search-query" class="search-bar" placeholder="Search queries...">
+            <div id="questions-list"></div>
+        </div>
+        <div class="right-pane">
+            <h2>Welcome to Discussion Portal!</h2>
+            <div id="question-form">
+                <h2>Ask a Question</h2>
+                <form id="new-question-form">
+                    <label for="title">Topic:</label>
+                    <input type="text" id="title" name="title" required>
+                    <label for="question">Details:</label>
+                    <textarea id="question" name="question" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div id="response-section" style="display: none;">
+                <h2 id="question-title"></h2>
+                <p id="question-body"></p>
+                <h3>Response</h3>
+                <div id="responses-list"></div>
+                <form id="response-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" name="comment" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+                <button id="back-btn" class="back-button">Back to Query</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
